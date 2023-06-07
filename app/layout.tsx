@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
 
@@ -13,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* <header>
+      <Navbar/>
+      </header> */}
       <body className=' bg-[#f3f4f1] font-geologica'>{children}</body>
     </html>
   )

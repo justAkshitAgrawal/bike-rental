@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 
 const Home = () => {
   return (
-    <div className='h-screen '>
+    <div className='h-fit '>
       <Navbar />
       <Hero/>
     </div>

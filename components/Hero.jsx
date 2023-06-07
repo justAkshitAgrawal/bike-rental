@@ -1,12 +1,12 @@
-import React from "react";
+import CenterPoster from "./CenterPoster";
 import { BsGooglePlay, BsApple } from "react-icons/bs";
 import { RiTimerFlashLine, RiWallet3Line } from "react-icons/ri";
 import { IoIosPeople } from "react-icons/io";
 
 function Hero() {
   return (
-    <div className="flex justify-between px-40">
-      <div className="flex flex-col max-w-[15vw] mt-20 ">
+    <div className="flex justify-between mt-20 sm:px-40">
+      <div className="flex flex-col max-w-[15vw] mt-10 ">
         <h1 className="text-6xl font-semibold uppercase">
           E-Bikes
           <br /> Rental
@@ -32,9 +32,11 @@ function Hero() {
         </div>
       </div>
 
-      <div></div>
+      <div className="-ml-20">
+        <CenterPoster />
+      </div>
 
-      <div className="flex flex-col max-w-[15vw] mt-20 space-y-28">
+      <div className="flex flex-col max-w-[15vw] space-y-28 mt-10">
         <div>
           <div className="p-2 bg-white rounded-full w-fit ">
             <RiTimerFlashLine className="w-8 h-8 text-blue-500" />

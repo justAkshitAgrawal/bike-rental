@@ -1,10 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { BsDot } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
+  const router = useRouter();
+  console.log(router.pathname);
+
   return (
-    <div className="flex items-center justify-between px-40 py-10">
+    <header className="flex items-center justify-between py-10 sm:px-40">
       <h1 className="flex items-center text-lg italic font-semibold uppercase">
         Electric
         <span>
@@ -14,11 +20,13 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center space-x-20 text-[#6a6a68] font-light">
-        <Link href="/">Hello</Link>
-        <Link href="/">Pricing</Link>
-        <Link href="/">Map</Link>
-        <Link href="/">FAQ</Link>
-        <Link href="/">Contact</Link>
+        <Link href="/">
+          <h1 className={router.pathname == "/" ? "active" : ""}>Home</h1>
+        </Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/map">Map</Link>
+        <Link href="/faq">FAQ</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
       <div>
@@ -27,7 +35,7 @@ function Navbar() {
           <h1>Log In</h1>
         </button>
       </div>
-    </div>
+    </header>
   );
 }
 
