@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { BsDot } from "react-icons/bs";
 import { MdLogin } from "react-icons/md";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 function Navbar() {
-  const router = useRouter();
-  console.log(router.pathname);
+  const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <header className="flex items-center justify-between py-10 sm:px-40">
@@ -20,13 +21,55 @@ function Navbar() {
       </h1>
 
       <div className="flex items-center space-x-20 text-[#6a6a68] font-light">
-        <Link href="/">
-          <h1 className={router.pathname == "/" ? "active" : ""}>Home</h1>
+        <Link className="relative" href="/">
+          {pathname == "/" && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[1px] w-full bg-black"
+            />
+          )}
+          <h1 className={pathname == "/" ? "active" : ""}>Home</h1>
         </Link>
-        <Link href="/pricing">Pricing</Link>
-        <Link href="/map">Map</Link>
-        <Link href="/faq">FAQ</Link>
-        <Link href="/contact">Contact</Link>
+
+        <Link className="relative" href="/pricing">
+          {pathname == "/pricing" && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[1px] w-full bg-black"
+            />
+          )}
+          <h1 className={pathname == "/pricing" ? "active" : ""}>Pricing</h1>
+        </Link>
+
+        <Link className="relative" href="/map">
+          {pathname == "/map" && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[1px] w-full bg-black"
+            />
+          )}
+          <h1 className={pathname == "/map" ? "active" : ""}>Map</h1>
+        </Link>
+
+        <Link className="relative" href="/faq">
+          {pathname == "/faq" && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[1px] w-full bg-black"
+            />
+          )}
+          <h1 className={pathname == "/faq" ? "active" : ""}>FAQ</h1>
+        </Link>
+
+        <Link className="relative" href="/contact">
+          {pathname == "/contact" && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[1px] w-full bg-black"
+            />
+          )}
+          <h1 className={pathname == "/contact" ? "active" : ""}>Contact</h1>
+        </Link>
       </div>
 
       <div>

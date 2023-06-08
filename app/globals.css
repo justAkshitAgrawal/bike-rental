@@ -6,6 +6,6 @@
 
 @layer components {
   .active {
-    @apply bg-gray-100;
+    @apply font-normal text-black;
   }
 }

@@ -1,14 +1,17 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import {PageWrapper} from "./page-wrapper";
 
 const Home = () => {
   return (
-    <div className='h-fit '>
+    <div className="h-fit ">
       <Navbar />
-      <Hero/>
+      <PageWrapper>
+        <Hero />
+      </PageWrapper>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

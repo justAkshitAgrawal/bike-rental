@@ -36,7 +36,7 @@ function Hero() {
         <CenterPoster />
       </div>
 
-      <div className="flex flex-col max-w-[15vw] space-y-28 mt-10">
+      <div className="flex flex-col max-w-[15vw] space-y-24 mt-10">
         <div>
           <div className="p-2 bg-white rounded-full w-fit ">
             <RiTimerFlashLine className="w-8 h-8 text-blue-500" />

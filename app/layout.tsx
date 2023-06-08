@@ -17,7 +17,8 @@ export default function RootLayout({
       {/* <header>
       <Navbar/>
       </header> */}
-      <body className=' bg-[#f3f4f1] font-geologica'>{children}</body>
+      <body className=' bg-[#f3f4f1] font-geologica'>
+        {children}</body>
     </html>
   )
 }
