@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import bike from "../assets/bike.png";
+import bike from "../assets/trek.png";
 import { motion } from "framer-motion";
 
 function CenterPoster() {
@@ -13,15 +13,15 @@ function CenterPoster() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="absolute top-[30%] left-[50%] -translate-x-[50%]"
+          className="absolute top-[25%] left-[50%] -translate-x-[50%]"
         >
-          <h1 className="text-xl italic font-semibold">Motorad | X1</h1>
+          <h1 className="text-xl italic font-semibold">Trek Dual Sport+ 2</h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 420 }}
+          animate={{ opacity: 1, x: 390 }}
           transition={{ duration: 1.5 }}
-          className="absolute -bottom-[11%] right-[50%] w-[40vw]"
+          className="absolute -bottom-[1%] right-[50%] w-[40vw]"
         >
           <Image
             src={bike}

@@ -2,23 +2,32 @@
 
 import Link from "next/link";
 import { BsDot } from "react-icons/bs";
-import { MdLogin } from "react-icons/md";
+import { MdDashboard, MdLogin } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const pathname = usePathname();
-  console.log(pathname);
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
+  console.log(user);
 
   return (
     <header className="flex items-center justify-between py-10 sm:px-40">
-      <h1 className="flex items-center text-lg italic font-semibold uppercase">
-        Electric
-        <span>
-          <BsDot className="-ml-1 -mr-2 text-blue-500" />
-        </span>
-        City
-      </h1>
+      <Link href="/">
+        <h1 className="flex items-center text-lg italic font-semibold uppercase">
+          Electric
+          <span>
+            <BsDot className="-ml-1 -mr-2 text-blue-500" />
+          </span>
+          City
+        </h1>
+      </Link>
 
       <div className="flex items-center space-x-20 text-[#6a6a68] font-light">
         <Link className="relative" href="/">
@@ -73,10 +82,23 @@ function Navbar() {
       </div>
 
       <div>
-        <button className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full">
-          <MdLogin className="w-5 h-5 text-blue-500" />
-          <h1>Log In</h1>
-        </button>
+        {user === null ? (
+          <Link
+            href="/account"
+            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full"
+          >
+            <MdLogin className="w-5 h-5 text-blue-500" />
+            <h1>Log In</h1>
+          </Link>
+        ) : (
+          <Link
+            href="/dashboard"
+            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full"
+          >
+            <MdDashboard className="w-5 h-5 text-blue-500" />
+            <h1>Dashboard</h1>
+          </Link>
+        )}
       </div>
     </header>
   );

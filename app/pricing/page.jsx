@@ -117,6 +117,9 @@ function page() {
           <AliceCarousel
             mouseTracking
             infinite
+            autoPlay
+            autoPlayInterval={4000}
+            animationDuration={1000}
             disableButtonsControls
             responsive={responsive}
             items={items}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
     "@types/react-dom": "18.2.4",
@@ -17,12 +18,14 @@
     "eslint-config-next": "13.4.4",
     "firebase": "^9.22.1",
     "framer-motion": "^10.12.16",
+    "google-map-react": "^2.2.1",
     "next": "13.4.4",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-alice-carousel": "^2.7.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
+    "react-otp-input": "^3.0.2",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.3"
   }
