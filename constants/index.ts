@@ -25,3 +25,46 @@ export const faqs = [
       "Currently, our e-bike rentals are limited to specific cities or regions. You can check the availability of our rental services in your desired location on our website. We are continuously expanding our services, so stay updated on our website for any future expansions.",
   },
 ];
+
+export const bikes = [
+  {
+    id: 1,
+    bike: "Motorad | X1",
+    hourly: 120,
+    daily: 800,
+    img: "/bike.png",
+    use: "Best for city and off-roading",
+  },
+  {
+    id: 2,
+    bike: "Aventon Level.2",
+    hourly: 100,
+    daily: 700,
+    img: "/aventonA.png",
+    use: "Best for city rides",
+  },
+  {
+    id: 3,
+    bike: "Trek Dual Sport+ 2",
+    hourly: 200,
+    daily: 1000,
+    img: "/trek.png",
+    use: "Best for adventure",
+  },
+  {
+    id: 4,
+    bike: "Co-op Cycles CTY e1.1",
+    hourly: 150,
+    daily: 900,
+    img: "/coop.png",
+    use: "Best for adventure",
+  },
+  {
+    id: 5,
+    bike: "Specialized Globe Haul ST",
+    hourly: 250,
+    daily: 1500,
+    img: "/haul.png",
+    use: "Best for city and adventure",
+  },
+];
