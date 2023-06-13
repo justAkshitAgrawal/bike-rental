@@ -27,7 +27,9 @@ export const OTPLogin = () => {
   return (
     <div className="relative flex flex-col items-center px-10 py-5 bg-white rounded-md">
       <GiStarShuriken className="absolute w-5 h-5 top-4 left-4 " />
-      <h1 className="w-full pb-1 text-4xl text-center border-b ">Enter OTP</h1>
+      <h1 className="w-full pb-1 text-4xl text-center border-b max-sm:text-2xl ">
+        Enter OTP
+      </h1>
       <div className="flex flex-col items-center mt-5">
         <OTPInput
           value={otp}
@@ -35,7 +37,7 @@ export const OTPLogin = () => {
           numInputs={6}
           placeholder="XXXXXX"
           containerStyle=""
-          inputStyle="h-[45px] lg:!w-[50px] !w-[50%] bg-gray-200 outline-none rounded-md  mx-1"
+          inputStyle="h-[45px] lg:!w-[50px] max-sm:!w-[30px] bg-gray-200 outline-none rounded-md  mx-1"
           renderInput={(props) => <input {...props} />}
         />
 

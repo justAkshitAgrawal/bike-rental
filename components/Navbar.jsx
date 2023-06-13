@@ -15,12 +15,11 @@ function Navbar() {
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
-  console.log(user);
 
   return (
-    <header className="flex items-center justify-between py-10 sm:px-40">
+    <header className="flex items-center justify-between px-5 py-10 md:px-10 lg:px-40">
       <Link href="/">
-        <h1 className="flex items-center text-lg italic font-semibold uppercase">
+        <h1 className="flex items-center italic font-semibold uppercase md:text-lg">
           Electric
           <span>
             <BsDot className="-ml-1 -mr-2 text-blue-500" />
@@ -29,7 +28,7 @@ function Navbar() {
         </h1>
       </Link>
 
-      <div className="flex items-center space-x-20 text-[#6a6a68] font-light">
+      <div className="flex items-center space-x-20 max-lg:space-x-10 text-[#6a6a68] font-light max-sm:hidden">
         <Link className="relative" href="/">
           {pathname == "/" && (
             <motion.span
@@ -85,7 +84,7 @@ function Navbar() {
         {user === null ? (
           <Link
             href="/account"
-            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full"
+            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full max-md:px-3"
           >
             <MdLogin className="w-5 h-5 text-blue-500" />
             <h1>Log In</h1>
@@ -93,7 +92,7 @@ function Navbar() {
         ) : (
           <Link
             href="/dashboard"
-            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full"
+            className="flex items-center px-5 py-2 space-x-2 bg-white rounded-full max-md:px-3"
           >
             <MdDashboard className="w-5 h-5 text-blue-500" />
             <h1>Dashboard</h1>

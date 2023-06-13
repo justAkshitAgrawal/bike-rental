@@ -51,7 +51,7 @@ const Login = () => {
       <Navbar />
       <div id="recaptcha-container"></div>
       <PageWrapper>
-        <div className="flex items-center justify-center mt-44">
+        <div className="flex items-center justify-center mt-44 ">
           {!showOtp ? (
             <PhoneLogin
               phone={phone}

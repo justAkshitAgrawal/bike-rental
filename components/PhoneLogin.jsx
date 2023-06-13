@@ -32,7 +32,9 @@ export const PhoneLogin = ({ phone, setPhone, setShowOtp, getOTP }) => {
   return (
     <div className="relative flex flex-col items-center px-10 py-5 bg-white rounded-md">
       <GiStarShuriken className="absolute w-5 h-5 top-4 left-4 " />
-      <h1 className="w-full pb-1 text-4xl text-center border-b ">Login</h1>
+      <h1 className="w-full pb-1 text-4xl text-center border-b max-sm:text-2xl ">
+        Login
+      </h1>
 
       <input
         type="number"
@@ -48,7 +50,7 @@ export const PhoneLogin = ({ phone, setPhone, setShowOtp, getOTP }) => {
             setDisabled(false);
           }
         }}
-        className="mt-5 w-[300px] bg-gray-100 rounded-md outline-none p-2 text-end placeholder:text-end text-xl tracking-wide disabled:cursor-not-allowed"
+        className="mt-5 w-[300px] max-sm:w-[200px] max-sm:text-sm bg-gray-100 rounded-md outline-none p-2 text-end placeholder:text-end text-xl tracking-wide disabled:cursor-not-allowed"
       />
       {error && (
         <p className="text-red-500">Please enter a valid phone number</p>

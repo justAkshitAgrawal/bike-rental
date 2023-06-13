@@ -1,21 +1,28 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { DashNav } from "../../components/DashNav";
 import { bikes } from "@/constants";
 import Image from "next/image";
 import { DetailsCard } from "@/components/DetailsCard";
+import { useRouter } from "next/navigation";
 
 const Dashboard = () => {
   const [selectedBike, setSelectedBike] = React.useState(null);
+  const router = useRouter();
+  useEffect(() => {
+    if (!localStorage.getItem("user")) {
+      router.push("/account");
+    }
+  }, []);
 
   return (
     <div>
       <DashNav />
       <div className="flex flex-col items-center mt-10">
         <h1 className="text-3xl">Rent a bike!</h1>
-        <div className="flex justify-between w-full mt-20 px-[10%] space-x-20 ">
-          <div className="p-10 bg-white rounded-md w-[50%] flex flex-col items-center">
+        <div className="flex justify-between max-sm:flex-col max-sm:items-center w-full mt-20 px-[10%] sm:space-x-20 max-sm:pb-10">
+          <div className="p-10 bg-white rounded-md sm:w-[50%] flex flex-col items-center">
             <h1 className="text-xl ">Select a bike</h1>
             <div className="flex flex-wrap justify-center gap-4 mt-10 max-w-[600px]">
               {bikes.map((bike) => {
@@ -58,7 +65,7 @@ const Dashboard = () => {
               )}
             </div>
           </div>
-          <div className="p-10 bg-white rounded-md w-[50%] flex flex-col items-center">
+          <div className="p-10 max-sm:mt-10  bg-white rounded-md w-[90%] sm:w-[50%] flex flex-col items-center">
             <h1 className="text-xl ">Details</h1>
 
             {selectedBike ? (

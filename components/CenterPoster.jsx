@@ -19,7 +19,7 @@ function CenterPoster() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 390 }}
+          animate={{ opacity: 1, x: "50%" }}
           transition={{ duration: 1.5 }}
           className="absolute -bottom-[1%] right-[50%] w-[40vw]"
         >

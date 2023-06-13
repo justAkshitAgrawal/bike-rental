@@ -1,25 +1,38 @@
+"use client";
+
 import CenterPoster from "./CenterPoster";
 import { BsGooglePlay, BsApple } from "react-icons/bs";
 import { RiTimerFlashLine, RiWallet3Line } from "react-icons/ri";
 import { IoIosPeople } from "react-icons/io";
+import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
   return (
-    <div className="flex justify-between mt-20 sm:px-40">
-      <div className="flex flex-col max-w-[15vw] mt-10 ">
-        <h1 className="text-6xl font-semibold uppercase">
+    <div className="flex justify-between mt-20 max-sm:mt-5 lg:px-40">
+      <div className="flex flex-col md:max-w-[15vw] mt-10 max-sm:px-20 max-sm:items-center ">
+        <h1 className="text-6xl font-semibold uppercase max-md:text-4xl">
           E-Bikes
           <br /> Rental
         </h1>
-        <p className="mt-10 text-[#6a6a68] text-xl font-light">
+        <p className="mt-10 text-[#6a6a68] text-xl font-light max-md:text-center">
           Driving around the city with joy and comfort for true adventure lovers
         </p>
 
-        <button className=" bg-[#1f1f1f] text-white mt-16 w-fit px-14 py-4 rounded-full">
-          Start Now
-        </button>
+        <Link href={localStorage.getItem("user") ? "/dashboard" : "/account"}>
+          <button className=" bg-[#1f1f1f] text-white mt-16 w-fit px-14 py-4 rounded-full">
+            Start Now
+          </button>
+        </Link>
 
-        <div className="mt-40">
+        <div className="flex flex-col mt-40 max-md:mt-32 max-sm:mt-10 max-md:items-center">
+          <Image
+            src="/bike.png"
+            alt="bike"
+            height={300}
+            width={300}
+            className="sm:hidden"
+          />
           <h1 className="text-[#6a6a68] text-sm">Download our app</h1>
           <div className="flex items-center mt-3 space-x-3">
             <div className="p-2 bg-white rounded-full">
@@ -32,11 +45,11 @@ function Hero() {
         </div>
       </div>
 
-      <div className="-ml-20">
+      <div className="lg:-ml-20 max-sm:hidden ">
         <CenterPoster />
       </div>
 
-      <div className="flex flex-col max-w-[15vw] space-y-24 mt-10">
+      <div className="flex flex-col max-w-[15vw] space-y-24 mt-10 max-sm:hidden ">
         <div>
           <div className="p-2 bg-white rounded-full w-fit ">
             <RiTimerFlashLine className="w-8 h-8 text-blue-500" />
