@@ -19,7 +19,7 @@ function Hero() {
           Driving around the city with joy and comfort for true adventure lovers
         </p>
 
-        <Link href={localStorage.getItem("user") ? "/dashboard" : "/account"}>
+        <Link href="/account">
           <button className=" bg-[#1f1f1f] text-white mt-16 w-fit px-14 py-4 rounded-full">
             Start Now
           </button>
